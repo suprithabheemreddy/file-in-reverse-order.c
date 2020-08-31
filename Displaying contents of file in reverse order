@@ -1,0 +1,30 @@
+# incude<stdio.h>
+int main (int arg,char argv[])
+{
+FILE fp1;
+int cnt=0;
+int i=0;
+if (arg<2)
+{
+printf("insufficient arguments\n");
+printf("use format name , programe name\n");
+return -1;
+}
+fp1 = fopen(argv[1],"r");
+if (fp1 ==null);
+{
+  printf("file cannot be opened\n",argv[1]);
+  return -1;
+  }
+  fseek(fp1,0,SEEK END);
+  cnt= ftell(fp1);
+  while (i<cnt)
+  {
+  i++;
+  fseek(fp1,-i,SEEK END);
+  printf("%c",fgetc(fp1));
+  }
+  printf("\n");
+  fclose(fp1);
+  return o;
+  }
